@@ -21,7 +21,24 @@ function setElementTextById(elementId, value) {
     ElementId.innerText = value;
 }
 
+//get score 
+function getScoreAndLifeById(elementId){
+    const ElementId=document.getElementById(elementId);
+    const score=parseInt(ElementId.innerText);
+    return score;
+}
 
+//set keyboard background
+function setBackgroundById(elementId){
+    const AlphabetId=document.getElementById(elementId);
+    AlphabetId.classList.add('bg-orange-400');
+}
+
+//remove keyboard background
+function removeBackgroundById(elementId){
+    const AlphabetId=document.getElementById(elementId);
+    AlphabetId.classList.remove('bg-orange-400')
+}
 //random alphabet
 
 function getRandomAlphabet() {
