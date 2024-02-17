@@ -13,6 +13,11 @@ function play() {
 function handleKeyboardButtonPress(event) {
     const keyPress = event.key;
     const randomKey=getElementTextById('screen-result');
+
+    if(keyPress==="Escape"){
+        hideElementById('play-ground');
+        showElementById('home-section')
+    }
     if(keyPress===randomKey){
         const currentScore=getScoreAndLifeById('score-area')
        
@@ -33,8 +38,8 @@ function handleKeyboardButtonPress(event) {
         }
     }
     
-  
 }
+
 document.addEventListener('keyup', handleKeyboardButtonPress)
 
 
@@ -52,5 +57,5 @@ function gameOver(){
     setElementTextById('score-final',score);
     const currentAlphabet=getElementTextById('screen-result');
     removeBackgroundById(currentAlphabet);
-    console.log(currentAlphabet);
+  
 }
